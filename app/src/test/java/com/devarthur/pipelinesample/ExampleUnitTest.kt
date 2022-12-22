@@ -1,8 +1,7 @@
 package com.devarthur.pipelinesample
 
-import org.junit.Test
-
 import org.junit.Assert.*
+import org.junit.Test
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,6 +11,6 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(22, 10 + 10)
+        assertEquals(20, 10 + 10)
     }
 }
