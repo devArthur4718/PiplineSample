@@ -1,6 +1,6 @@
 package com.devarthur.pipelinesample.domain
 
-import org.junit.Assert.*
+import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
 class ExpressionParserTest {
@@ -13,13 +13,15 @@ class ExpressionParserTest {
         parser = ExpressionParser("3+5")
 
         // When its processed
-        val parts = parser.parse()
+        val actualParsedList = parser.parse()
 
         // Verifity the result
-        val expected = listOf(
+        val expectedParsedList = listOf(
             ExpressionPart.Number(3.0),
             ExpressionPart.Op(Operation.ADD),
             ExpressionPart.Number(5.0)
         )
+
+        assertThat(expectedParsedList).isEqualTo(actualParsedList)
     }
 }
