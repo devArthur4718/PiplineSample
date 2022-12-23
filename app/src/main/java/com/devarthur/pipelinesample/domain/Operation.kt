@@ -12,5 +12,5 @@ val operationsSymbols = Operation.values().map { it.symbol }.joinToString("")
 
 fun operationFromSymbol(symbol: Char): Operation {
     return Operation.values().find { it.symbol == symbol }
-        ?: throw IllegalArgumentException("Invalid symbol")
+        ?: throw IllegalArgumentException("Invalid Symbol")
 }
