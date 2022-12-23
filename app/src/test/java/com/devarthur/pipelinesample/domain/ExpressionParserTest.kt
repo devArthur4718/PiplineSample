@@ -44,23 +44,6 @@ class ExpressionParserTest {
         assertThat(expectedParsedList).isEqualTo(actualParsedList)
     }
 
-    @Test(expected = IllegalArgumentException::class)
-    fun `invalid expression parse`() {
-        // Given an expression
-        parser = ExpressionParser("abcdefg")
-
-        // When its processed
-        val returnedException = parser.parse()
-
-        // Verifity the result
-        val expectedException: java.lang.IllegalArgumentException =
-            java.lang.IllegalArgumentException("Invalid Symbol")
-
-        assertThat(returnedException as java.lang.IllegalArgumentException)
-            .hasMessageThat()
-            .startsWith("Invalid")
-    }
-
     @Test
     fun whenCheckingException_thenInstanceOf() {
         val anException: Exception = java.lang.IllegalArgumentException(NumberFormatException())
