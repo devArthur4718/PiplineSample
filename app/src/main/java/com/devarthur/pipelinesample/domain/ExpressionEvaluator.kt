@@ -1,6 +1,5 @@
 package com.devarthur.pipelinesample.domain
 
-
 /**
  * Uses the following grammar
  * expression :	term | term + term | term − term

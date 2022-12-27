@@ -44,19 +44,19 @@ class ExpressionParserTest {
         assertThat(expectedParsedList).isEqualTo(actualParsedList)
     }
 
-    @Test
-    fun whenCheckingException_thenInstanceOf() {
-        val anException: Exception = java.lang.IllegalArgumentException(NumberFormatException())
-        assertThat(anException)
-            .hasCauseThat()
-            .isInstanceOf(NumberFormatException::class.java)
-    }
-
-    @Test
-    fun whenCheckingException_thenCauseMessageIsKnown() {
-        val anException: java.lang.Exception = java.lang.IllegalArgumentException("Bad value")
-        assertThat(anException)
-            .hasMessageThat()
-            .startsWith("Bad")
-    }
+//    @Test
+//    fun whenCheckingException_thenInstanceOf() {
+//        val anException: Exception = java.lang.IllegalArgumentException(NumberFormatException())
+//        assertThat(anException)
+//            .hasCauseThat()
+//            .isInstanceOf(NumberFormatException::class.java)
+//    }
+//
+//    @Test
+//    fun whenCheckingException_thenCauseMessageIsKnown() {
+//        val anException: java.lang.Exception = java.lang.IllegalArgumentException("Bad value")
+//        assertThat(anException)
+//            .hasMessageThat()
+//            .startsWith("Bad")
+//    }
 }
